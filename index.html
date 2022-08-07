@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+
+#total{
+    background-image: url(istockphoto-1297933144-612x612.jpg);
+    position: sticky;
+    opacity: 3;
+}
+#p-h{
+   
+    padding-top: 1.5px;
+}
+#video{
+    background: linear-gradient(orange,white,green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#lets-try{
+    display: flex
+     
+}
+#main-para{
+    background: radial-gradient(orange,white,green);
+    padding-top: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#main-para h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.wrapper {
+    display: flex;
+}
+
+.stick {
+    height: 450px;
+    width: 10px;
+    background: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.flag {
+    width: 270px;
+    height: 180px;
+    box-shadow: 0px 0px 90px 1px #989;
+    background-color: transparent;
+    position: relative;
+}
+
+.top {
+    height: 60px;
+    background-color: #ff9933
+}
+
+.middle {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom {
+    height: 60px;
+    background-color: green
+}
+
+.wheel {
+    height: 43px;
+    width: 43px;
+    border: 1px solid darkblue;
+    border-radius: 45px;
+    position: relative;
+    margin: 0 auto;
+    animation-name: wheel;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+}
+
+.wheel .line {
+    height: 100%;
+    width: 1px;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    background: darkblue;
+}
+
+.line:nth-child(1) {
+    transform: rotate(15deg)
+}
+
+.line:nth-child(2) {
+    transform: rotate(30deg)
+}
+
+.line:nth-child(3) {
+    transform: rotate(45deg)
+}
+
+.line:nth-child(4) {
+    transform: rotate(60deg)
+}
+
+.line:nth-child(5) {
+    transform: rotate(75deg)
+}
+
+.line:nth-child(6) {
+    transform: rotate(90deg)
+}
+
+.line:nth-child(7) {
+    transform: rotate(105deg)
+}
+
+.line:nth-child(8) {
+    transform: rotate(120deg)
+}
+
+.line:nth-child(9) {
+    transform: rotate(135deg)
+}
+
+.line:nth-child(10) {
+    transform: rotate(150deg)
+}
+
+.line:nth-child(11) {
+    transform: rotate(165deg)
+}
+
+.line:nth-child(12) {
+    transform: rotate(180deg)
+}
+
+@keyframes wheel {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.wave{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+      128deg, rgba(89,72,21,0) 39%,
+      rgba(250,245,245,0.8474025974025974)
+      46%, rgba(89,72,21,0) 53%);
+  animation-name: wavy;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes wavy {
+   0%{
+    background-position:
+    -400px 0px, -400px 0px,
+    -400px 0px,-400px 0px;
+   }
+   100%{
+    background-position: 800px 0px,
+    800px 0px, 800px 0px, 800px 0px;
+   }
+ }
+ .flag-fly{
+  /* margin: 50%; */
+  position: relative;
+  left: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+ }
+ .all{
+  margin-top: 50px;
+  margin-bottom: 50px;
+ }
+</style>
+</head>
+<body>
+<div id="total">
+     <div id="p-h">
+        <h1>आज़ादी का अमृत महोत्सव</h1>
+        <h3>LNCT Group of colleges Present Azadi Ka Amrit Mahotsav Web (Page Competation)</h3>
+        <h4> Designed By:- Saurabh Kumar LNCT&S (Cyber Security 0157CY201053)</h4>
+
+     </div>
+
+ <div id="lets-try">
+         
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="WhatsApp Image 2022-08-07 at 6.14.43 PM.jpeg"  height="400px" width="800px">
+      <div class="text"></div>
+    </div>
+    
+     <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="WhatsApp Image 2022-08-07 at 5.46.19 PM.jpeg"  height="450px" width="700px"">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="WhatsApp Image 2022-08-07 at 5.46.19 PM (1).jpeg"  height="400px" width="800px">
+      <div class="text"></div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="8_WhatsApp_Image_2021-03-16_at_4.37.58_PM.png" style="animation: reverse;" height="400px" width="800px">
+        <div class="text"></div>
+      </div>
+    
+       <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="har-ghar-tiranga-web-banner-download-section-english-version.jpg" height="400px" width="800px"">
+        <div class="text"></div>
+      </div>  
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="8_1_1_banner3Hindi.jpg" height="400px" width="800px"">
+        <div class="text"></div>
+      </div> 
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="Screenshot (269).png" height="400px" width="800px"">
+        <div class="text"></div>
+      </div> 
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+      
+      <span class="dot"></span>
+    </div>
+        </div>
+    
+    
+        <audio controls autoplay muted>
+            <source src="WhatsApp Audio 2022-08-07 at 7.07.27 PM.mpeg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+    
+     </div>
+
+     <div class="flag-fly">
+
+      <div class="wrapper">
+        <div class="stick"></div>
+      <div class="flag">
+        <div class="wave"></div>
+        <div class="top"></div>
+        <div class="middle">
+          <div class="wheel">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+        <div class="bottom"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+     <div>
+        <img src="Screenshot (268).png" alt="">
+     </div>
+
+     
+     <div id="video" class="all">
+        <video width="320" height="240" controls>
+            <source src="WhatsApp Video 2022-08-07 at 7.13.22 PM.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          </video>
+      </div>
+
+      <div id="main-para" class="all">
+        <h1>THOUGHTS</h1>
+        <h1>हर घर तिरंगा</h1>
+        <div class="p">
+            Azadi Ka Amrit Mahotsav 2022: आजादी का अमृत महोत्सव की हार्दिक शुभकामनाएं / बधाइयाँ | Azadi Ka Amrit Mahotsav Wishes, आजादी का अमृत महोत्सव की बधाई सन्देश 75th anniversary of India’s | Azadi Ka Amrit Mahotsav is a series of events organized by the Government of India to commemorate the 75th anniversary of India’s independence. In the spirit of public participation, the festival will be celebrated as a public festival. In this article, We celebrate to Azadi Ka Amrit Mahotsav 2022. <br><br>
+        </div>
+     
+  <div class="p">
+ बलिदान हुए इस देश के नायक।
+आओ मिलकर करें प्रणाम हम।
+उनके दिखाएं राह पर चलकर;
+करें ज्योतिपुंज का निर्माण हम।।
+  </div>
+<div class="p">
+    <br><br>
+
+
+    आजादी के इस अमृत महोत्सव पर..
+    आओ मिलकर करे हमसब संकल्प अब।
+    नव-भारत के निर्माण को करना होगा “देश-मंथन”
+    अमृत को खोज कर करना होगा आविष्कार अब।
+    
+    रह जाए रक्त की बेला;
+    जरा-सी अमृत उठा लेना…
+    <br><br>
+</div>
+
+<div class="p">
+    आजादी के अमृत महोत्सव पर, आओ नए भारत का निर्माण करें!
+    कुछ कर दिए हमने काम अनोखे, कुछ नए करने का गुमान करें!
+    
+    हर घर फहराएंगे तिरंगा, सब तिरंगे का अभिमान करें!
+    आजादी के अमृत महोत्सव पर, आओ नए भारत का निर्माण करें!
+    कुछ कर दिए हमने काम अनोखे, कुछ नये करने का गुमान करें!
+</div>
+<p><a href="https://youtu.be/cvPWvo4NHMs">WatchMe</a></p>
+ <p><a href="https://amritmahotsav.nic.in/">amritmahotsav/goverment</a></p>
+<h1>
+    THANKS FOR VISITING
+</h1>
+
+      </div>
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script> 
+
+</body>
+</html> 
